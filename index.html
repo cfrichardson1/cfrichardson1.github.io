@@ -38,19 +38,19 @@
 
 <head>
   <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-128761026-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script>
+  window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+  ga('create', 'UA-128761026-1', 'auto');
 
-  gtag('config', 'UA-128761026-1');
-</script>
+  // Replace the following lines with the plugins you want to use.
+  ga('require', 'eventTracker');
+  ga('require', 'maxScrollTracker');
+  ga('require', 'urlChangeTracker');
+  // ...
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
+  ga('send', 'pageview');
+  </script>
+<script async src="autotrack.js"></script>
   <title>Homepage</title>
 
   <!-- Bootstrap CSS CDN -->
@@ -432,6 +432,8 @@ min-width: none;
       <br><svg class="d-block" width="36" height="36" viewBox="0 0 612 612" xmlns="http://www.w3.org/2000/svg" focusable="false"><title>&nbsp;Bootstrap</title><path fill="currentColor" d="M510 8a94.3 94.3 0 0 1 94 94v408a94.3 94.3 0 0 1-94 94H102a94.3 94.3 0 0 1-94-94V102a94.3 94.3 0 0 1 94-94h408m0-8H102C45.9 0 0 45.9 0 102v408c0 56.1 45.9 102 102 102h408c56.1 0 102-45.9 102-102V102C612 45.9 566.1 0 510 0z"></path><path fill="currentColor" d="M196.77 471.5V154.43h124.15c54.27 0 91 31.64 91 79.1 0 33-24.17 63.72-54.71 69.21v1.76c43.07 5.49 70.75 35.82 70.75 78 0 55.81-40 89-107.45 89zm39.55-180.4h63.28c46.8 0 72.29-18.68 72.29-53 0-31.42-21.53-48.78-60-48.78h-75.57zm78.22 145.46c47.68 0 72.73-19.34 72.73-56s-25.93-55.37-76.46-55.37h-74.49v111.4z"></path></svg> Bootstrap 4</li><br>
       <br><img src="/static/flasks.png" width = '50px' alt = 'My Worm Farm'>Flasks</li><br>
       <br><img src="/static/python.svg" width = '70px'>&nbsp Python</font>
+      <br><br>You are being<br>tracked by<br><img src="/static/google_analytics.png" width = '70px'></font>
+
     </center>
   </p>
 </nav>
@@ -451,7 +453,7 @@ min-width: none;
 
     <center>
       <h1>CHRISTOPHER <font color = 'blue'>RICHARDSON</font></h1>
-      <h4>(619) 729-0328 | CFRichardson1@gmail.com</h4>
+      <h4>(949) 529-0656 | CFRichardson1@gmail.com</h4>
       <div class="col-4"><img style = 'border-radius: 50%;' src="/static/profile_img.jpg" class="img-fluid" width = '250px' alt = 'Profile Picture'>
 
       </center>
@@ -469,7 +471,7 @@ min-width: none;
           <li>Working for a company with products and services that I believe in</li>
           <li>Working with people that I may learn from and grow with</li>
           <center>
-
+<br><br>
               <font size = '5px' style = 'font-weight: bold' color ='blue'>PROGRAMMING LANGUAGES & TOOLS</font>
               <br>
             </p>
@@ -479,7 +481,7 @@ min-width: none;
             <i class="fab fa-html5 fa-4x"></i>
             <i class="fas fa-database fa-4x"></i><br><br>
             <p>
-              <strong><font size> Languages & Frameworks</strong>: Python | R | SQL | VBA | JavaScript | Flask | SciKit Learn | Seaborn/GGplot2 | Shiny<br>
+              <strong><font size> Languages & Frameworks</strong>: Python | R | SQL | VBA | JavaScript | Flask | SciKit Learn | Seaborn | Shiny | Chartify<br>
               <strong>Technologies:</strong> HTML5 | JSON | CSS | XML | MongoDB | GitHub<br>
               <strong>Softwares:</strong> Tableau | MS Office Suite | RStudio | Jupyter Notebook | SPSS | MS Visio
               </p>
@@ -502,12 +504,29 @@ min-width: none;
 
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-date md-left">
-              <img width = '100px' src="/static/Cruise.png" >
+              <img width = '90px' alt="Zen Tuning LLC" src="/static/zen_tuning.jpg" >
             </div>
             <div class="resume-content mr-auto">
-              <h3 class="mb-0">R&D Autonomous Vehicle Trainer</h3>
-              <div class="subheading mb-3">Cruise Automation<br><font size = '2'>San Francisco, CA</font></div>
-              <li>Created and assisted in the creation of various tools to help streamline testing</li>
+              <h4 class="mb-0">Zen Tuning</h4>
+              <div class="subheading mb-3">Shopify Web Developer<br><font size = '2'>San Diego, CA</font></div>
+              <li>Implementation of Search Engine Optimization through Google Analytics to achieve an increase in organic search conversions</li>
+              <li>Design of User Interface through Liquid template language and CSS</li>
+              <li>Assist engineers in the design of high performance automotive parts</li>
+            </div>
+            <!-- DATE -->
+            <div class="resume-date text-md-right">
+              <span class="text-primary">2018 till Present</span>
+            </div>
+          </div>
+
+          <div class="resume-item d-flex flex-column flex-md-row mb-5">
+            <div class="resume-date md-left">
+              <img width = '100px' alt="Cruise Automation" src="/static/Cruise.png" >
+            </div>
+            <div class="resume-content mr-auto">
+              <h4 class="mb-0">Cruise Automation <font size = 2> (a General Motors Company)</font></h4>
+              <div class="subheading mb-3">R&D Autonomous Vehicle Trainer<br><font size = '2'>San Francisco, CA</font></div>
+              <li>Increased testing efficiency by designing and creating various tools to help streamline testing</li>
               <li>Analyzed, debugged, monitored, and datalogged vehicle’s technical difficulties while driving both autonomously and manually</li>
               <li>Assisted with ensuring that training curriculum was up to date with industry safety standards</li>
               <li>Trained Autonomous Vehicle Trainees on current software and autonomous vehicle operation</li>
@@ -515,17 +534,17 @@ min-width: none;
             </div>
             <!-- DATE -->
             <div class="resume-date text-md-right">
-              <span class="text-primary">August 2017 to April 2018</span>
+              <span class="text-primary">2017 to 2018</span>
             </div>
           </div>
 
           <div class="resume-item d-flex flex-column flex-md-row mb-5">
             <div class="resume-date md-left">
-              <img width = '100px' alt="BCforward" src="/static/BCForward.png">
+              <img width = '100px' alt="BCForward @ Google" src="/static/Google.png">
             </div>
             <div class="resume-content mr-auto">
-              <h3 class="mb-0"> Content Review Analyst </h3>
-              <div class="subheading mb-3">BCForward @ Google<br><font size = '2'>Mountain View, CA</font></div>
+              <h4 class="mb-0">Google through BC Forward</h4>
+              <div class="subheading mb-3">Data integrity Specialist<br><font size = '2'>Mountain View, CA</font></div>
               <li>Aided in redesigning the content review process which enabled analysts to exceed required metrics, increasing efficiency by 20+ %</li>
               <li>Developed an interactive work schedule web application using the Shiny library for R</li>
               <li>Performed a wide variety of application policy reviews for the client's production line; including QA support, quick turnaround reviews, and critical thinking</li>
@@ -533,26 +552,11 @@ min-width: none;
             </div>
             <!-- DATE -->
             <div class="resume-date text-md-right">
-              <span class="text-primary">Jan 2016 - July 2017</span>
+              <span class="text-primary">2016 to 2017</span>
             </div>
           </div>
 
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-date md-left">
-              <img width = '100px' alt="YMCA" src="/static/ymca.png">
-            </div>
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0"> After School Mentor </h3>
-              <div class="subheading mb-3">YMCA of San Diego<br><font size = '2'>San Diego, CA</font></div>
-              <li>Mentored middle school students with homework in various subjects such as math, reading, and history</li>
-              <li>Generated interest in computer hardware, software, and other computer-related technologies</li>
-              <li>Introduced students to basic programming languages, structures, and ideas through Code.Org and the use of a Raspberry Pi 2</li>
-            </div>
-            <!-- DATE -->
-            <div class="resume-date text-md-right">
-              <span class="text-primary">February 2015 to August 2015</span>
-            </div>
-          </div>
+
 
         </div>
         <br>
