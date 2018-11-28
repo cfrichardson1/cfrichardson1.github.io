@@ -124,12 +124,6 @@ body {
   position: relative;
 }
 
-#sidebar_toggle{
-  color: #99ccff;
-  font-weight: bold;
-  float: left;
-}
-
 /* ---------------------------------------------------
     EXPERIMENT
 ----------------------------------------------------- */
@@ -137,7 +131,6 @@ body {
 section.resume-section {
 padding-top: 5rem !important;
 padding-bottom: 5rem !important;
-/* max-width: 75rem; */
 }
 
 #experience span {
@@ -184,12 +177,24 @@ min-width: none;
 }
 
 /* ---------------------------------------------------
-    SIDEBAR STYLE
+    ** SIDEBAR STYLE **
 ----------------------------------------------------- */
+
+/*  toggle button style */
+#sidebar_toggle{
+  color: #99ccff;
+  font-weight: bold;
+  float: left;
+}
+
 .wrapper {
     display: flex;
     align-items: stretch;
 }
+
+/* ---------------------------------------------------
+    EXPANDED SIDEBAR STYLE
+----------------------------------------------------- */
 
 #sidebar {
     min-width: 250px;
@@ -199,45 +204,6 @@ min-width: none;
     transition: all 0.3s;
     font-family: 'Poppins';
     font-size: 20px
-}
-
-#sidebar.active {
-    min-width: 100px;
-    max-width: 100px;
-    text-align: center;
-
-}
-
-
-#sidebar ul li a {
-    text-align: left;
-}
-
-#sidebar.active ul li a {
-    padding: 20px 10px;
-    text-align: center;
-    font-size: 0.85em;
-}
-
-#sidebar.active ul li a i {
-    margin-right:  0;
-    display: block;
-    font-size: 1.8em;
-    margin-bottom: 5px;
-}
-
-#sidebar.active ul ul a {
-    padding: 10px !important;
-}
-
-.active a[aria-expanded="false"]::before,
-.active a[aria-expanded="true"]::before {
-    top: auto;
-    bottom: 5px;
-    right: 50%;
-    -webkit-transform: translateX(50%);
-    -ms-transform: translateX(50%);
-    transform: translateX(50%);
 }
 
 #sidebar .sidebar-header {
@@ -250,22 +216,45 @@ min-width: none;
     font-size: 1.8em;
 }
 
-#sidebar ul.components {
-    padding: 20px 0;
-    border-bottom: 1px solid #47748b;
-}
-
+/*  glyphicons are controlled by li */
 #sidebar ul li a {
     padding: 10px;
     font-size: 1.1em;
     display: block;
+    text-align: center;
 }
+
 #sidebar ul li a:hover {
     color: #00ccff;
     background: #fff;
 }
-#sidebar ul li a i {
-    margin-right: 10px;
+
+/* ---------------------------------------------------
+    Sidebar Active Style
+----------------------------------------------------- */
+
+#sidebar.active {
+    min-width: 120px;
+    max-width: 120px;
+}
+
+#sidebar.active ul li a i {
+  padding: 20px 5px;
+  margin-right:  0;
+  display: block;
+  font-size: 1.8em;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.active a[aria-expanded="false"]::before,
+.active a[aria-expanded="true"]::before {
+    top: auto;
+    bottom: 5px;
+    right: 50%;
+    -webkit-transform: translateX(50%);
+    -ms-transform: translateX(50%);
+    transform: translateX(50%);
 }
 
 /* ---------------------------------------------------
@@ -296,8 +285,8 @@ min-width: none;
 @media (max-width: 768px) {
 
     #sidebar {
-        min-width: 80px;
-        max-width: 80px;
+        min-width: 120px;
+        max-width: 120px;
         text-align: center;
         margin-left: -80px !important ;
     }
@@ -309,13 +298,6 @@ min-width: none;
         -ms-transform: translateX(50%);
         transform: translateX(50%);
     }
-    #sidebar.active {
-        margin-left: 0 !important;
-    }
-
-    #sidebar .sidebar-header h3, #sidebar .CTAs {
-        display: none;
-    }
 
     #sidebar .sidebar-header strong {
         display: block;
@@ -323,25 +305,15 @@ min-width: none;
 
     #sidebar ul li a {
         padding: 20px 10px;
-    }
-
-    #sidebar ul li a span {
         font-size: 0.85em;
-    }
-    #sidebar ul li a i {
-        margin-right:  0;
+
+          margin-right:  0;
         display: block;
     }
 
-    #sidebar ul ul a {
-        padding: 10px !important;
-    }
 
     #sidebar ul li a i {
         font-size: 1.3em;
-    }
-    #sidebar {
-        margin-left: 0;
     }
 
     #sidebar_toggle{
@@ -349,7 +321,6 @@ min-width: none;
       font-weight: bold;
       float: left;
     }
-
 
 }
 
@@ -378,9 +349,11 @@ min-width: none;
 
     </li>
     <li>
+
       <a href="#sitesSubmenu" data-toggle="collapse" aria-expanded="false">
         Chris's Websites
-      </a><i class="glyphicon-glyphicon-triangle-bottom"></i>
+      </a>
+      <i class="glyphicon-glyphicon-triangle-bottom"></i>
       <ul class="collapse list-unstyled" id="sitesSubmenu">
         <li>
           <a href="https://www.linkedin.com/in/cfrichardson">
