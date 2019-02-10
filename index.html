@@ -16,7 +16,8 @@
 </script>
 
 <!-- Bootstrap CSS CDN -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
 
 <!-- Our Custom CSS -->
 <meta charset="utf-8">
@@ -25,31 +26,68 @@
 <style>
   body {
     position: relative;
-    font-size: 18px;
+    font-size: 19px;
+    padding-bottom: 20px;
   }
 
-  /* adjusts sidebar top padding */
-  .affix {
-    top: 100px;
-    z-index: 9999 !important;
+  hr {
+      border: none;
+      height: 1px;
+      background-color: #333; /* Modern Browsers */
   }
 
 
-  .col-md-11 {
-    padding-left: 40px;
+  .name {
+    font-size: 40px;
+    font-weight: bold;
+    font-family: "Arial Black", Gadget, sans-serif;
+
   }
 
   div.row {
     padding-top: 20px;
   }
 
-  p.company {
-
+  li.job_bullets {
+    font-size: 19px;
   }
+
+  #main_content {
+    padding-top: 50px;
+  }
+
+  p.card-text {
+    font-size: 19px;
+  }
+
+  p.content, li.bullets{
+    font-size: 21px;
+  }
+
   /* Dummy Sections */
   p.dummy {
-    height: 30px;
+    height: 40px;
   }
+
+  p.job_title {
+    font-size: 25px;
+    font-weight: bold;
+    padding-bottom: 0px;
+  }
+
+  p.ruling_divider {
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 40px;
+    weight: bold;
+    /* text-align: center; */
+  }
+
+  p.strong {
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+
 
   h2 {
     font-family: 'Impact', Charcoal, sans-serif;
@@ -61,7 +99,15 @@
   .subheading mb-3 {
     padding-top: 0;
   }
-  #main_content {
+
+  #contact_card {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .card-title {
+    text-align: center;
+    font-size: 30px;
   }
 
 
@@ -69,28 +115,50 @@
     /* NAVBAR */
   /* ------------------------------------------------ */
 
-    #myScrollspy {
-      padding-left: 30px;
-    }
-
-    a.main_bullit {
-      font-weight: bold;
-      font-size: 20px;
-    }
-
-    a.sub_bullit {
-      margin-left: 30px;
-      font-size: 15px;
-    }
-
     a.nav-link {
+      font-weight: bold;
+      color: white;
+    }
+
+    a.nav-color {
+      font-weight: bold;
+    }
+
+    a.dropdown-bullet {
+      font-size: 20px;
+      padding-left: 10px;
+
+    }
+
+    a.dropdown-item {
+      font-size: 20px;
       font-weight: bold;
     }
 
     a.dropdown-toggle {
+      color: white;
       font-weight: bold;
+      font-size: 20px;
       font-style: 'New Century Schoolbook', TeX Gyre Schola, serif;
     }
+
+    #header {
+      font-size: 20px;
+      text-align: center;
+      text-decoration: underline overline;
+    }
+/*
+    #right_dropdown {
+      left: 30px;
+    } */
+
+    }
+
+    #nav_buttons {
+      padding-right: 50px;
+    }
+
+
   /* ------------------------------------------------ */
   /* NAVBAR END */
   /* ------------------------------------------------ */
@@ -101,17 +169,26 @@
 /* ------------------------------------------------ */
 
   #myScrollspy {
-    padding-left: 30px;
+    padding-left: 10px;
+    top: 300px;
+    z-index: 9999 !important;
+  }
+
+  ul.nav-pills {
+    position: fixed;
   }
 
   a.main_bullit {
     font-weight: bold;
     font-size: 20px;
+    color: black;
   }
 
   a.sub_bullit {
     margin-left: 30px;
     font-size: 15px;
+    color: black;
+
   }
 
 /* ------------------------------------------------ */
@@ -127,50 +204,6 @@
   }
 
 
-  /* ------------------------------------------------ */
-    /* BOOTSTRAP 4 */
-  /* ------------------------------------------------ */
-
-  #contact_card {
-
-    font-weight: bold;
-  }
-
-  .card {
-    position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    border: 1px solid rgba(0, 0, 0, 0.125);
-    border-radius: 0.25rem;
-  }
-
-
-  .card-body {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-    padding: 1.25rem;
-  }
-
-  .card-title {
-    margin-bottom: 0.75rem;
-    align: center;
-  }
-
-  .bg-dark {
-    background-color: #343a40 !important;
-  }
-
-
 
 
   </style>
@@ -178,170 +211,162 @@
 <!-- Font Awesome JS -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
-<!-- Sidebar JS -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-
 
 </head>
 
 <!-- Body -->
 <body data-spy="scroll" data-target="#myScrollspy" data-offset="15">
+
 <!-- Navbar -->
-<nav class="navbar navbar-inverse navbar-fixed-top">
-	
+<nav class="navbar fixed-top navbar-expand-lg bg-dark">
 	<a class="navbar-brand" href="#"><strong><img src="/static/cfr_logo3.png" class="img-fluid" width = '50px' alt = 'logo'></strong></a>
 
 
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul id = 'nav_buttons' class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="#">Home</a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" href="#">Interests</a>
+      </li> -->
+
+			<!-- Personal Website Dropdown -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Personal Sites
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+														<a id = 'header' class="dropdown-item" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Background &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+
+					<a class="dropdown-item" href="https://www.linkedin.com/in/cfrichardson">
+						<i class="fab fa-linkedin"></i>  LinkedIn
+					</a>
+					<a class="dropdown-item" href="https://github.com/cfrichardson1">
+						<i class="fab fa-github"></i> Github Repo
+					</a>
+					<a id = 'header' class="dropdown-item" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Working Sites &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+						<a class="dropdown-item" href="https://www.zentuning.com">Zen Tuning</a>
+						<a class="dropdown-item" href="https://www.circuitsyndicate.com">Circuit Syndicate</a>
+
+		      </div>
+      </li>
+			<!-- END Personal Website Dropdown -->
+
+			<!-- Projects & EDAs Dropdown -->
+			<li id = 'right_dropdown' class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Projects
+        </a>
+        <div id = 'right_dropdown' class="dropdown-menu" aria-labelledby="navbarDropdown">
+					<a id = 'header' class="dropdown-item" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp EDAs &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+
+					<a class="dropdown-item" href="https://cfrichardson1.github.io/Weather_EDA_Flask_App/">
+						Weather EDA &<br> Data Engineering
+					</a>
+					<a class="dropdown-item" href="https://cfrichardson1.github.io/lotto_eda/">
+Cali Lotto Data <br>Engineering & EDA</a>
+					<a id = 'header' class="dropdown-item" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Reports &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+
+					<a class="dropdown-item" href="#/">
+						future
+					</a>
+
+				 </div>
+      </li>
+
+			<li class="nav-item">
+				<a class="nav-link" href="#">Future Interests Page</a>
+			</li>
+
+    </ul>
+		<!-- END Portfolio Dropdown -->
 
 
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
+  </div>
+</nav>
 
-    </div>
+<div class="container-fluid">
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+<div class="container-fluid">
 
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-					<a class="nav-link" href="/">Home</a>
-				</li>
-
-
-
-				<!-- Personal Website Dropdown -->
-				<li class="nav-item dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Personal Sites<span class="caret"></span></a>
-
-          <ul class="dropdown-menu" role="menu">
-            <li><a class="dropdown-item" href="https://www.linkedin.com/in/cfrichardson">
-							<strong>
-								<i class="fab fa-linkedin"></i>  LinkedIn
-							</strong></a>
-						</li>
-						<li>
-							<a class="dropdown-item" href="https://github.com/cfrichardson1">
-								<strong>
-									<i class="fab fa-github"></i> Github Repo
-								</strong>
-							</a>
-						</li>
-            <li class="divider"></li>
-            <li><a href="www.zentuning.com">Zen Tuning</a></li>
-          </ul>
-        </li>
-				<!-- END Personal Website Dropdown -->
-
-				<!-- Personal Website Dropdown -->
-				<li class="nav-item dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Portfolio<span class="caret"></span></a>
-
-          <ul class="dropdown-menu" role="menu">
-            <li>
-								<a class="dropdown-item" href="https://cfrichardson1.github.io/Weather_EDA_Flask_App/"><strong>
-									<center>Weather Data Engineering & EDA<br> w/ Python</center></strong></a>
-						</li>
-						<li>
-							<a class="dropdown-item" href="https://cfrichardson1.github.io/lotto_eda/">
-		            <strong><center>Cali Lotto Data Engineering & EDA <br>w/ R</center></strong>
-		          </a>
-						</li>
-            <li class="divider"></li>
-            <li>
-							<a class="dropdown-item" href="/old_gui_landing">
-								<strong>
-									<center>Previous Website Interface</center>
-								</strong>
-							</a>
-
-						</li>
-          </ul>
-        </li>
-				<!-- END Portfolio Dropdown -->
-
-
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-  </nav>
-
-<div class="row-no-gutters">
+<div class="row">
 
   
-<div class="col-sm-3">
+<div class="col-3">
 
 	<!-- Side Navbar -->
 
-	<nav id="myScrollspy">
-		<ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="50px">
+
+	<nav id="myScrollspy" class="navbar">
+		<ul class="nav nav-pills flex-column">
 			<!-- ABOUT -->
-			<li><a class = 'main_bullit' href="#about">About</a></li>
-			<!-- SUB -->
-			<li><a class = 'sub_bullit' href="#header_contact">Contact Info</a></li>
-			<li><a class = 'sub_bullit' href="#mission_statement">Mission Statement</a></li>
-			<li><a class = 'sub_bullit' href="#career_themes">Career Themes</a></li>
-			<li><a class = 'sub_bullit' href="#programs_and_tools">Languages and Tools</a></li>
+				<li class="nav-item"><a class = 'nav-link active main_bullit' href="#about">About</a></li>
+				<!-- SUB -->
+				<li class="nav-item"><a class = 'nav-link sub_bullit' href="#header_contact">Contact Info</a></li>
+				<li class="nav-item"><a class = 'nav-link sub_bullit' href="#mission_statement">Mission Statement</a></li>
+				<li class="nav-item"><a class = 'nav-link sub_bullit' href="#career_themes">Career Themes</a></li>
+				<li class="nav-item"><a class = 'nav-link sub_bullit' href="#programs_and_tools">Languages and Tools</a></li>
 
-			<!-- EXPERIENCE  -->
-			<li><a class = 'main_bullit' href="#experience">Experience</a></li>
-			<!-- SUB -->
-			<li><a class = 'sub_bullit' href="#zen_tuning">Zen Tuning</a></li>
-			<li><a class = 'sub_bullit' href="#cruise_automation">Cruise Automation</a></li>
-			<li><a class = 'sub_bullit' href="#google">Google</a></li>
-			<li><a class = 'sub_bullit' href="#ymca">YMCA</a></li>
-      <li><a class = 'main_bullit' href="#contact_card">Contact Info</a></li>
+				<!-- EXPERIENCE  -->
+				<li class="nav-item"><a class = 'nav-link main_bullit' href="#experience">Experience</a></li>
+				<!-- SUB -->
+				<li class="nav-item"><a class = 'nav-link sub_bullit' href="#zen_tuning">Zen Tuning</a></li>
+				<li class="nav-item"><a class = 'nav-link sub_bullit' href="#cruise_automation">Cruise Automation</a></li>
+				<li class="nav-item"><a class = 'nav-link sub_bullit' href="#google">Google</a></li>
+				<li class="nav-item"><a class = 'nav-link sub_bullit' href="#ymca">YMCA</a></li>
+	      <li class="nav-item"><a class = 'nav-link main_bullit' href="#contact_card">Contact Info</a></li>
 
-    </ul>
-  </nav>
+	    </ul>
+	  </nav>
   <!-- END OF SIDEBAR  -->
 
 </div>
 
 
-<div id = 'main_content' class="col-sm-9">
+<div id = 'main_content' class="col-9">
 
 	<!-- MAIN CONTENT  -->
   <!-- -------------------------------------------- -->
   <!-- **** ABOUT **** -->
   <!-- -------------------------------------------- -->
 
-  <p id="about" class = 'dummy' style = 'padding-top:50px'></p>
-	      <h1><img width = '50px'src="/static/construction_hat.jpg"><u>Page is Under Construction</u><img width = '50px'src="/static/construction_hat.jpg"></h1>
-
   <p id = 'header_contact' class = 'info'>
     <center>
-     <h1>CHRISTOPHER RICHARDSON</h1>
+     <p class = 'name'>CHRISTOPHER RICHARDSON</p>
      <h4>(949) 529-0656 | ChrisRichardson@CFRichardson.info | <a href ='https://www.linkedin.com/in/cfrichardson/' style="color: rgb(88, 146, 239)">www.linkedin.com/in/cfrichardson</a></h4>
      <div class="col-4"><img style = 'border-radius: 50%;' src="/static/profile_img.jpg" class="img-fluid" width = '250px' alt = 'Profile Picture'>
      </center>
    </p>
 
    <p id ='mission_statement' class = 'dummy'></p>
-   <p>
-
-     <h3>Mission Statement</h3>
+	 <p class = 'strong'>Mission Statement</p>
+   <p class = 'content'>
      Motivated, budding Software Engineer with a passion for technology looking to leverage academic and professional background in Data Science, academic marketing research, and IT experience. An insatiable learner ready to expand research beyond the academic domain, and further develop best research practices with a like-minded group to ensure that no stone is unturned toward an ideal outcome.
    </p>
 
    <p id ='career_themes' class = 'dummy'></p>
-   <p>
-     <h3>Important career themes</h3>
-     <li>Working in a field that I am truly passionate about</li>
-     <li>Working for a company with products and services that I believe in</li>
-     <li>Working with people that I may learn from and grow with</li>
+	 <p class = 'strong'>Important career themes</p>
+   <p class = 'content'>
+     <li class = 'bullets'>Working in a field that I am truly passionate about</li>
+     <li class = 'bullets'>Working for a company with products and services that I believe in</li>
+     <li class = 'bullets'>Working with people that I may learn from and grow with</li>
    </p>
 
    <p id = 'programs_and_tools' class = 'dummy'></p>
 
-   <h3>PROGRAMMING LANGUAGES & TOOLS</h3>
+   <p class = 'strong'>Programming Languages and Tools</p>
 
    <i class="fab fa-python fa-4x"></i>
    <i class="fab fa-r-project fa-4x"></i>
    <i class="fab fa-js-square fa-4x"></i>
    <i class="fab fa-html5 fa-4x"></i>
    <i class="fas fa-database fa-4x"></i><br><br>
-   <p>
+   <p class = 'content'>
     <strong> Languages & Frameworks</strong>: Python | R | SQL | VBA | JavaScript | Flask | SciKit Learn | Seaborn | Shiny | Liquid <br>
     <strong>Technologies:</strong> HTML5 | JSON | CSS | XML | MongoDB | GitHub<br>
     <strong>Softwares:</strong> Tableau | MS Office Suite | RStudio | Jupyter Notebook | SPSS | MS Visio/Lucid Chart
@@ -351,27 +376,31 @@
   <!-- -------------------------------------------- -->
   <!-- **** ABOUT **** -->
   <!-- -------------------------------------------- -->
-  <p style = 'padding-top: 20px; font-size: 24;'>Experience</p>
+	<hr>
+
+  <p class = 'ruling_divider'>Experience</p>
+	<hr>
+
   <!-- ---------- -->
   <!-- ZEN TUNING -->
   <!-- ---------- -->
+	<p id ='zen_tuning' class = 'dummy'></p>
   <div class="row">
-    <p id = 'zen_tuning' class = 'dummy'></p>
     <div class="col-md-1">
-      <img width = '90px' alt="Zen Tuning LLC" src="/static/zen_tuning.jpg" >
+      <img href = 'https://ZenTuning.com' width = '90px' alt="Zen Tuning LLC" src="/static/zen_tuning.jpg" >
     </div>
     <div class="col-md-11">
       <!-- Job Description Header -->
-      <p><font style = 'font-size: 22px; font-weight: bold;'>Zen Tuning</font><br>
+      <p><font style = 'font-size: 25px; font-weight: bold;'>Zen Tuning</font><br>
         <i>2018 till Present</i><br>
-        Junior Robotics Engineer & Shopify Web Developer<br><font size = '2'>San Diego, CA</font></p>
+        Junior Robotics Engineer & Shopify Web Developer<br><font size = '3'>San Diego, CA</font></p>
         <!-- END Job Description Header -->
 
         <p> <a href="https://ZenTuning.com" style="color: rgb(88, 146, 239)">www.ZenTuning.com</a> & <a href="https://CircuitSyndicate.com" style="color: rgb(88, 146, 239)">www.CircuitSyndicate.com</a>
-          <li>Design, documentation with Fritzing, assist in the build and assembly of Arduino based TIG weld bot using C++ and Python</li>
-          <li>Assist engineers in the design of high performance automotive parts</li>
-          <li>Design of User Interface through Liquid template language and CSS</li>
-          <li>Implementation of Search Engine Optimization through Google Analytics to achieve an increase in organic search conversions</li>
+          <li class = 'job_bullets'>Design, documentation with Fritzing, assist in the build and assembly of Arduino based TIG weld bot using C++ and Python</li>
+          <li class = 'job_bullets'>Assist engineers in the design of high performance automotive parts</li>
+          <li class = 'job_bullets'>Design of User Interface through Liquid template language and CSS</li>
+          <li class = 'job_bullets'>Implementation of Search Engine Optimization through Google Analytics to achieve an increase in organic search conversions</li>
     </div>
   </div>
   <!-- -------- -->
@@ -381,24 +410,23 @@
   <!-- ---------- -->
   <!-- Cruise Automation -->
   <!-- ---------- -->
+	<p id = 'cruise_automation' class = 'dummy'></p>
   <div class="row">
-    <p id = 'cruise_automation' class = 'dummy'>
-    </p>
     <div class="col-md-1">
       <img width = '110px' alt="Cruise Automation" src="/static/Cruise.png">
     </div>
     <div class="col-md-11">
       <!-- Job Description Header -->
-      <p><font style = 'font-size: 22px; font-weight: bold;'>Cruise Automation</font><font style = 'font-size: 15px;'> (a General Motors Company)</font><br>
+      <p><font style = 'font-size: 25px; font-weight: bold;'>Cruise Automation</font><font style = 'font-size: 15px;'> (a General Motors Company)</font><br>
         <i>2017 to 2018</i><br>
-        R&D Autonomous Vehicle Trainer<br><font size = '2'>San Francisco, CA</font></p>
+        R&D Autonomous Vehicle Trainer<br><font size = '3'>San Francisco, CA</font></p>
         <!-- END Job Description Header -->
 
-        <li>Increased testing efficiency by designing and creating various tools to help streamline testing</li>
-        <li>Analyzed, debugged, monitored, and datalogged vehicle’s technical difficulties while driving both autonomously and manually</li>
-        <li>Assisted with ensuring that training curriculum was up to date with industry safety standards</li>
-        <li>Trained Autonomous Vehicle Trainees on current software and autonomous vehicle operation</li>
-        <li>Compiled detailed reports providing feedback based on vehicle behavior</li>
+        <li class = 'job_bullets'>Increased testing efficiency by designing and creating various tools to help streamline testing</li>
+        <li class = 'job_bullets'>Analyzed, debugged, monitored, and datalogged vehicle’s technical difficulties while driving both autonomously and manually</li>
+        <li class = 'job_bullets'>Assisted with ensuring that training curriculum was up to date with industry safety standards</li>
+        <li class = 'job_bullets'>Trained Autonomous Vehicle Trainees on current software and autonomous vehicle operation</li>
+        <li  class = 'job_bullets'>Compiled detailed reports providing feedback based on vehicle behavior</li>
     </div>
   </div>
   <!-- -------- -->
@@ -409,23 +437,21 @@
   <!-- ---------- -->
   <!-- Google -->
   <!-- ---------- -->
+	<p id = 'google' class = 'dummy'></p>
   <div class="row">
-    <p id = 'google' class = 'dummy'></p>
     <div class="col-md-1">
       <img width = '110px' alt="Google" src="/static/Google.png">
     </div>
     <div class="col-md-11">
       <!-- Job Description Header -->
-      <p><font style = 'font-size: 22px; font-weight: bold;'>Google through BC Forward</font><br>
+      <p><font style = 'font-size: 25px; font-weight: bold;'>Google through BC Forward</font><br>
         <i>2016 to 2017</i><br>
-        Data integrity Specialist<br><font size = '2'>Mountain View, CA</font></p>
+        Data integrity Specialist<br><font size = '3'>Mountain View, CA</font></p>
         <!-- END Job Description Header -->
-
-        <li>Increased testing efficiency by designing and creating various tools to help streamline testing</li>
-        <li>Analyzed, debugged, monitored, and datalogged vehicle’s technical difficulties while driving both autonomously and manually</li>
-        <li>Assisted with ensuring that training curriculum was up to date with industry safety standards</li>
-        <li>Trained Autonomous Vehicle Trainees on current software and autonomous vehicle operation</li>
-        <li>Compiled detailed reports providing feedback based on vehicle behavior</li>
+        <li class = 'job_bullets'>Aided in adding processes to the content review process which enabled analysts to exceed required metrics, increasing efficiency by 20+ %</li>
+        <li class = 'job_bullets'>Developed an interactive work schedule web application using the Shiny library for R</li>
+        <li class = 'job_bullets'>Performed a wide variety of application policy reviews for the client's production line; including QA support, quick turnaround reviews, and critical thinking</li>
+        <li class = 'job_bullets'>Took action on non-compliant products to ensure optimal quality in order to protect Google's reputation</li>
     </div>
   </div>
   <!-- -------- -->
@@ -436,21 +462,21 @@
   <!-- ---------- -->
   <!-- YMCA -->
   <!-- ---------- -->
+	<p id = 'ymca' class = 'dummy'></p>
   <div class="row">
-    <p id = 'ymca' class = 'dummy'></p>
     <div class="col-md-1">
       <img width = '110px' alt="YMCA" src="/static/ymca.png">
     </div>
     <div class="col-md-11">
       <!-- Job Description Header -->
-      <p><font style = 'font-size: 22px; font-weight: bold;'>YMCA of San Diego</font><br>
+      <p><font style = 'font-size: 25px; font-weight: bold;'>YMCA of San Diego</font><br>
         <i>2015 to 2015</i><br>
-        Afterschool Mentor<br><font size = '2'>San DIego, CA</font></p>
+        Afterschool Mentor<br><font size = '3'>San Diego, CA</font></p>
         <!-- END Job Description Header -->
 
-        <li>Mentored middle school students with homework in fields such as math, reading, and history</li>
-        <li>Generated interest in computer hardware, software, and other computer related technologies</li>
-        <li>Introduced students to basic programming languages, structures, and ideas through Code.Org and the use of a Raspberry Pi 2</li>
+        <li class = 'job_bullets'>Mentored middle school students with homework in fields such as math, reading, and history</li>
+        <li class = 'job_bullets'>Generated interest in computer hardware, software, and other computer related technologies</li>
+        <li class = 'job_bullets'>Introduced students to basic programming languages, structures, and ideas through Code.Org  and the use of a Raspberry Pi 2</li>
     </div>
   </div>
   <!-- -------- -->
@@ -458,67 +484,80 @@
   <!-- ---------- -->
 
 
-
-
-
 </div>
 
   
+
 </div>
 
 
 
 
-<hr>
 <!-- Contact Section -->
   <div class="container" id='contact_card'>
-    <p class = 'dummy' style = 'padding-top:150px;'></p>
-
 
 
     <div class="row">
-      <div class="col-xs-3">
+      <div class="col">
 
       </div>
 
 
-      <div class="col-xs-6">
+      <div class="col-6">
           <p class="card-title">CONTACT INFO</p>
           <hr>
           <p class="card-text text-black">
             <strong>Mobile: </strong>(949) 529-0656
             <br>
             <strong>Email: </strong>ChrisRichardson@cfrichardson.info
-            <p class="card-title">
-              <a class="dropdown-item" href="https://www.linkedin.com/in/cfrichardson">
+            <br>
+              Chris's <a href="https://www.linkedin.com/in/cfrichardson">
                 <i class="fab fa-linkedin"></i>  LinkedIn Page
               </a>
-            </p>
+
 
           </p>
       </div>
 
-      <div class="col-xs-3">
+      <div class="col">
 
         </p>
       </div>
     </div>
-
-
-
-
   </div>
+  <div class = 'container-fluid'>
+  <div class = 'row'>
 
+      <div class="col">
+      </div>
+      <div class="col-6">
+        <p class = 'strong'>
+
+        Built with:
+
+
+
+      &nbsp<img src="/static/bootstrap.png" width = '70px' alt = 'Bootstrap'>Bootstrap 4
+      &nbsp<img src="/static/flasks.png" width = '100px' alt = 'Flasks'>Flasks
+      &nbsp<img src="/static/python.svg" width = '130px'>&nbspPython</font>
+      &nbsp<img src="/static/google_analytics.png" width = '100px'>Google Analytics</p>
+      </div>
+      <div class="col">
+      </div>
+  </div>
+</div>
 
 
 
 </body>
 
+</div>
 
 </div>
 
 <!-- Bootstrap JS -->
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js" integrity="sha384-vhJnz1OVIdLktyixHY4Uk3OHEwdQqPppqYR8+5mjsauETgLOcEynD9oPHhhz18Nw" crossorigin="anonymous"></script>t>
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
 </html>
