@@ -41,14 +41,7 @@
     padding-left: 110px;
   }
 
-  .col-1 {
-    font-size: 18px;
-    font-weight: bold;
-    align-items: center;
-    padding-top: 40px;
-    padding-left: 140px;
-    padding-right: 0px;
-  }
+
   .col-6 {
     padding-left: 20px;
   }
@@ -72,12 +65,13 @@
 
   }
 
+  /* For Padding */
   div.row {
     padding-top: 18px;
   }
 
   li.job_bullets {
-    font-size: 17px;
+    font-size: 15px;
   }
 
   #main_content {
@@ -85,20 +79,20 @@
   }
 
   p.card-text {
-    font-size: 16px;
+    font-size: 15px;
   }
 
   p.content, li.bullets{
-    font-size: 17px;
+    font-size: 13px;
   }
 
-  /* Dummy Sections */
+  /* Dummy Sections for padding purposes as well as HTML targets */
   p.dummy {
     height: 40px;
   }
 
   p.job_title {
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     padding-bottom: 0px;
   }
@@ -211,13 +205,13 @@
 
   a.main_bullit {
     font-weight: bold;
-    font-size: 20px;
+    font-size: 17px;
     color: black;
   }
 
   a.sub_bullit {
     margin-left: 30px;
-    font-size: 15px;
+    font-size: 14px;
     color: black;
 
   }
@@ -280,7 +274,7 @@
 					<a class="dropdown-item" href="https://github.com/cfrichardson1">
 						<i class="fab fa-github"></i> Github Repo
 					</a>
-					<a id = 'header' class="dropdown-item" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Working Sites &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+					<a id = 'navbar' class="dropdown-item" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Working Sites &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
 						<a class="dropdown-item" href="https://www.zentuning.com">Zen Tuning</a>
 						<a class="dropdown-item" href="https://www.circuitsyndicate.com">Circuit Syndicate</a>
 
@@ -294,17 +288,17 @@
           Projects
         </a>
         <div id = 'right_dropdown' class="dropdown-menu" aria-labelledby="navbarDropdown">
-					<a id = 'header' class="dropdown-item" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp EDAs &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+					<a id = 'navbar' class="dropdown-item" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp EDAs &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
 
 					<a class="dropdown-item" href="https://cfrichardson1.github.io/Weather_EDA_Flask_App/">
 						Weather EDA &<br> Data Engineering
 					</a>
 					<a class="dropdown-item" href="https://cfrichardson1.github.io/lotto_eda/">
 Cali Lotto Data <br>Engineering & EDA</a>
-					<a id = 'header' class="dropdown-item" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Reports &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
+					<a id = 'navbar' class="dropdown-item" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp R/Shiny Based App &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
 
-					<a class="dropdown-item" href="#/">
-						future
+					<a target="_blank" class="dropdown-item" href="https://cfrichardson1.shinyapps.io/july_scheduler_demo/">
+						Interactive Schedule App
 					</a>
 
 				 </div>
@@ -339,8 +333,8 @@ Cali Lotto Data <br>Engineering & EDA</a>
 			<!-- ABOUT -->
 				<li class="nav-item"><a class = 'nav-link active main_bullit' href="#about">About</a></li>
 				<!-- SUB -->
-				<li class="nav-item"><a class = 'nav-link sub_bullit' href="#mission_statement">Mission Statement</a></li>
-				<li class="nav-item"><a class = 'nav-link sub_bullit' href="#career_themes">Career Themes</a></li>
+				<li class="nav-item"><a class = 'nav-link sub_bullit' href="#professional_background">Professional Background</a></li>
+				<li class="nav-item"><a class = 'nav-link sub_bullit' href="#personal_background">Personal Background</a></li>
 				<li class="nav-item"><a class = 'nav-link sub_bullit' href="#programs_and_tools">Languages and Tools</a></li>
 
 				<!-- EXPERIENCE  -->
@@ -366,7 +360,7 @@ Cali Lotto Data <br>Engineering & EDA</a>
   <!-- **** ABOUT **** -->
   <!-- -------------------------------------------- -->
 
-  <p id = 'header_contact' class = 'info'>
+  <p id = 'about' class = 'info'>
     <center>	<h1><img width = '75x'src="/static/construction_hat.jpg"><u>Page is Under Construction</u><img width = '75px'src="/static/construction_hat.jpg"></h1>
      <p class = 'name'>CHRISTOPHER RICHARDSON</p>
      <div class="col-4"><img style = 'border-radius: 50%;' src="/static/profile_img.jpg" class="img-fluid" width = '250px' alt = 'Profile Picture'>
@@ -374,12 +368,12 @@ Cali Lotto Data <br>Engineering & EDA</a>
    </p>
 
 
-   <p id ='career_themes' class = 'dummy'></p>
+   <p id ='professional_background' class = 'dummy'></p>
 	 <p class = 'strong'>Professional Background</p>
    <p class = 'content'>
 		Associate Data Engineer with a passion for technology looking to leverage academic and professional background in Data Science, academic marketing research, and IT experience.  I have experience in cleaning and manipulating data sets through Python and R, diving into the data looking for trends through Exploratory Data Analysis using tools such as GGPlot, Seaborn, and Tableau. I love working with people with various backgrounds to get a well-rounded view on any subject at hand.  I have proven skills in customer service, marketing, teaching, and team management
    </p>
-	 <p id ='career_themes' class = 'dummy'></p>
+	 <p id ='personal_background' class = 'dummy'></p>
 	 <p class = 'strong'>Personal Background</p>
 	 <p class = 'content'>
 		Currently, I am in route looking for a graduate program in the field of Data Science with a specialization in Human Dynamics or Health Informatics.  I am able to speak elementary level Korean and Tagalog.  I have traveled and lived in various places in Asia and North America.  I have a few other plans in the future to see more of the wonderful world we live in.
@@ -469,7 +463,7 @@ Cali Lotto Data <br>Engineering & EDA</a>
 	<p id = 'google' class = 'dummy'></p>
   <div class="row">
     <div class="col-md-1">
-      <img width = '110px' alt="Google" src="/static/Google.png">
+      <img width = '90px' alt="Google" src="/static/Google.png">
     </div>
     <div class="col-md-11">
       <!-- Job Description Header -->
@@ -494,7 +488,7 @@ Cali Lotto Data <br>Engineering & EDA</a>
 	<p id = 'ymca' class = 'dummy'></p>
   <div class="row">
     <div class="col-md-1">
-      <img width = '110px' alt="YMCA" src="/static/ymca.png">
+      <img width = '90px' alt="YMCA" src="/static/ymca.png">
     </div>
     <div class="col-md-11">
       <!-- Job Description Header -->
@@ -564,10 +558,10 @@ Cali Lotto Data <br>Engineering & EDA</a>
 
 
 
-      &nbsp<img src="/static/bootstrap.png" width = '70px' alt = 'Bootstrap'>Bootstrap 4
-      &nbsp<img src="/static/flasks.png" width = '100px' alt = 'Flasks'>Flasks
-      &nbsp&nbsp&nbsp&nbsp&nbsp<img src="/static/python.svg" width = '130px'></font>
-      &nbsp<img src="/static/google_analytics.png" width = '140px'></p>
+      &nbsp<img src="/static/bootstrap.png" width = '50px' alt = 'Bootstrap'>Bootstrap 4
+      &nbsp<img src="/static/flasks.png" width = '90px' alt = 'Flasks'>Flasks
+      &nbsp&nbsp&nbsp&nbsp&nbsp<img src="/static/python.svg" width = '85px'></font>
+      &nbsp<img src="/static/google_analytics.png" width = '70px'></p>
       </div>
       <div class="col-3">
       </div>
