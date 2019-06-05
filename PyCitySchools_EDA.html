@@ -5,7 +5,7 @@
 
   <title>Test</title>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128761026-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -21,7 +21,6 @@
 
 <!-- Bootstrap CSS CDN -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-
 
 <!-- Our Custom CSS -->
 <meta charset="utf-8">
@@ -39,6 +38,8 @@
     font-weight: bold;
     align-items: center;
     padding-left: 110px;
+    padding-top: 100px;
+    padding-bottom: 45px;
   }
 
 
@@ -76,6 +77,7 @@
 
   #main_content {
     padding-top: 50px;
+    padding-left: 100px;
   }
 
   p.card-text {
@@ -88,7 +90,7 @@
 
   /* Dummy Sections for padding purposes as well as HTML targets */
   p.dummy {
-    height: 40px;
+    height: 30px;
   }
 
   p.job_title {
@@ -97,11 +99,13 @@
     padding-bottom: 0px;
   }
 
-  p.experience {
+  p.section_divider {
+    padding-top: 100px;
     font-family: "Arial Black", Gadget, sans-serif;
-    font-size: 30px;
+    font-size: 40px;
+    text-align: center;
+    text-decoration: underline overline;
     weight: bold;
-    /* text-align: center; */
   }
 
   p.strong {
@@ -109,6 +113,14 @@
     font-weight: bold;
   }
 
+  p.project-type {
+    font-size: 26px;
+    font-family: fantasy;
+    text-align: center;
+    text-decoration: underline;
+
+
+  }
 
 
   h2 {
@@ -142,6 +154,11 @@
     a.nav-link {
       font-weight: bold;
       color: white;
+      font-size: 15px;
+    }
+
+    p.nav-link {
+      font-weight: bold;
     }
 
     a.nav-color {
@@ -166,10 +183,7 @@
       text-align: center;
       text-decoration: underline overline;
     }
-/*
-    #right_dropdown {
-      left: 30px;
-    } */
+
 
     }
 
@@ -222,10 +236,7 @@
 
 
 
-  @media screen and (max-width: 810px) {
-    #section1, #section2, #section3, #section41, #section42  {
-      margin-left: 150px;
-    }
+  @media screen and (max-width: 500px) {  {
   }
 
 
@@ -236,14 +247,13 @@
 <!-- Font Awesome JS -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
-
 </head>
 
 <!-- Body -->
 <body data-spy="scroll" data-target="#myScrollspy" data-offset="15">
 
-<!-- Navbar -->
-<nav class="navbar fixed-top navbar-expand-lg bg-dark">
+  <!-- Navbar -->
+  <nav class="navbar fixed-top navbar-expand-lg bg-dark">
 	<a class="navbar-brand" href="#"><strong><img src="/static/cfr_logo3.png" class="img-fluid" width = '50px' alt = 'logo'></strong></a>
 
 
@@ -278,31 +288,6 @@
       </li>
 			<!-- END Personal Website Dropdown -->
 
-			<!-- Projects & EDAs Dropdown -->
-			<li id = 'right_dropdown' class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Projects
-        </a>
-        <div id = 'right_dropdown' class="dropdown-menu" aria-labelledby="navbarDropdown">
-					<a id = 'navbar' class="dropdown-item" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Python Based &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
-
-					<a class="dropdown-item" href="https://cfrichardson1.github.io/Weather_EDA_Flask_App/">
-						Weather EDA &<br> Data Engineering
-					</a>
-					<a class="dropdown-item" href="/PyCitySchools_EDA">
-Imaginary School District EDA</a>
-
-					<a id = 'navbar' class="dropdown-item" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp R/Shiny Based App &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
-
-					<a target="_blank" class="dropdown-item" href="https://cfrichardson1.shinyapps.io/july_scheduler_demo/">
-						Interactive Schedule App
-					</a>
-					<a class="dropdown-item" href="https://cfrichardson1.github.io/lotto_eda/">
-Cali Lotto Data <br>Engineering & EDA</a>
-
-				 </div>
-      </li>
-
 			<li class="nav-item">
 				<a class="nav-link" href="#">Future Interests Page</a>
 			</li>
@@ -314,13 +299,11 @@ Cali Lotto Data <br>Engineering & EDA</a>
   </div>
 </nav>
 
-<div class="container-fluid">
+  <div class="container-fluid">
 
-<div class="container-fluid">
+    <div class="row">
 
-<div class="row">
-
-  
+      
 <style type="text/css"
     /*!
 *
@@ -16313,8 +16296,9 @@ div#notebook {
 
 
 
-</div>
+    </div>
 
+    
 
 
 
@@ -16329,7 +16313,7 @@ div#notebook {
 
 
       <div class="col-6">
-          <p class="card-title">CONTACT INFO</p>
+          <p id = 'contact_title' class="card-title">CONTACT INFO</p>
           <hr>
           <p class="card-text text-black">
             <strong>Mobile: </strong>(949) 529-0656<br>
@@ -16372,9 +16356,7 @@ div#notebook {
 
 
 
-</body>
-
-</div>
+  </body>
 
 </div>
 

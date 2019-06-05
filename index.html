@@ -5,7 +5,7 @@
 
   <title>Homepage</title>
 
-  <!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-128761026-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -21,7 +21,6 @@
 
 <!-- Bootstrap CSS CDN -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-
 
 <!-- Our Custom CSS -->
 <meta charset="utf-8">
@@ -39,6 +38,8 @@
     font-weight: bold;
     align-items: center;
     padding-left: 110px;
+    padding-top: 100px;
+    padding-bottom: 45px;
   }
 
 
@@ -76,6 +77,7 @@
 
   #main_content {
     padding-top: 50px;
+    padding-left: 100px;
   }
 
   p.card-text {
@@ -88,7 +90,7 @@
 
   /* Dummy Sections for padding purposes as well as HTML targets */
   p.dummy {
-    height: 40px;
+    height: 30px;
   }
 
   p.job_title {
@@ -97,11 +99,13 @@
     padding-bottom: 0px;
   }
 
-  p.experience {
+  p.section_divider {
+    padding-top: 100px;
     font-family: "Arial Black", Gadget, sans-serif;
-    font-size: 30px;
+    font-size: 40px;
+    text-align: center;
+    text-decoration: underline overline;
     weight: bold;
-    /* text-align: center; */
   }
 
   p.strong {
@@ -109,6 +113,14 @@
     font-weight: bold;
   }
 
+  p.project-type {
+    font-size: 26px;
+    font-family: fantasy;
+    text-align: center;
+    text-decoration: underline;
+
+
+  }
 
 
   h2 {
@@ -142,6 +154,11 @@
     a.nav-link {
       font-weight: bold;
       color: white;
+      font-size: 15px;
+    }
+
+    p.nav-link {
+      font-weight: bold;
     }
 
     a.nav-color {
@@ -166,10 +183,7 @@
       text-align: center;
       text-decoration: underline overline;
     }
-/*
-    #right_dropdown {
-      left: 30px;
-    } */
+
 
     }
 
@@ -222,10 +236,7 @@
 
 
 
-  @media screen and (max-width: 810px) {
-    #section1, #section2, #section3, #section41, #section42  {
-      margin-left: 150px;
-    }
+  @media screen and (max-width: 500px) {  {
   }
 
 
@@ -236,14 +247,13 @@
 <!-- Font Awesome JS -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
-
 </head>
 
 <!-- Body -->
 <body data-spy="scroll" data-target="#myScrollspy" data-offset="15">
 
-<!-- Navbar -->
-<nav class="navbar fixed-top navbar-expand-lg bg-dark">
+  <!-- Navbar -->
+  <nav class="navbar fixed-top navbar-expand-lg bg-dark">
 	<a class="navbar-brand" href="#"><strong><img src="/static/cfr_logo3.png" class="img-fluid" width = '50px' alt = 'logo'></strong></a>
 
 
@@ -278,31 +288,6 @@
       </li>
 			<!-- END Personal Website Dropdown -->
 
-			<!-- Projects & EDAs Dropdown -->
-			<li id = 'right_dropdown' class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Projects
-        </a>
-        <div id = 'right_dropdown' class="dropdown-menu" aria-labelledby="navbarDropdown">
-					<a id = 'navbar' class="dropdown-item" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Python Based &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
-
-					<a class="dropdown-item" href="https://cfrichardson.info/Weather_EDA_webpage">
-						Weather EDA &<br> Data Engineering
-					</a>
-					<a class="dropdown-item" href="/PyCitySchools_EDA">
-Imaginary School District EDA</a>
-
-					<a id = 'navbar' class="dropdown-item" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp R/Shiny Based App &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a>
-
-					<a target="_blank" class="dropdown-item" href="https://cfrichardson1.shinyapps.io/july_scheduler_demo/">
-						Interactive Schedule App
-					</a>
-					<a class="dropdown-item" href="https://cfrichardson1.github.io/lotto_eda/">
-Cali Lotto Data <br>Engineering & EDA</a>
-
-				 </div>
-      </li>
-
 			<li class="nav-item">
 				<a class="nav-link" href="#">Future Interests Page</a>
 			</li>
@@ -314,14 +299,13 @@ Cali Lotto Data <br>Engineering & EDA</a>
   </div>
 </nav>
 
-<div class="container-fluid">
+  <div class="container-fluid">
 
-<div class="container-fluid">
+    <div class="row">
 
-<div class="row">
+      
 
-  
-<div class="col-md-3">
+<div class="col-md-1 d-sm-none d-xl-block d-print-block">
 
 
 	<!-- Side Navbar -->
@@ -329,14 +313,18 @@ Cali Lotto Data <br>Engineering & EDA</a>
 
 	<nav id="myScrollspy" class="navbar d-none d-lg-block d-print-block">
 		<ul class="nav nav-pills flex-column">
-			<!-- ABOUT -->
+			<!-- ---------- ABOUT SIDEBAR ---------- -->
 				<li class="nav-item"><a class = 'nav-link active main_bullit' href="#about">About</a></li>
 				<!-- SUB -->
 				<li class="nav-item"><a class = 'nav-link sub_bullit' href="#professional_background">Professional Background</a></li>
 				<li class="nav-item"><a class = 'nav-link sub_bullit' href="#personal_background">Personal Background</a></li>
 				<li class="nav-item"><a class = 'nav-link sub_bullit' href="#programs_and_tools">Languages and Tools</a></li>
 
-				<!-- EXPERIENCE  -->
+				<!-- ---------- PROJECTS SIDEBAR ---------- -->
+				<li class="nav-item"><a class = 'nav-link main_bullit' href="#projects">Projects</a></li>
+
+
+				<!-- ---------- EXPERIENCE SIDEBAR ---------- -->
 				<li class="nav-item"><a class = 'nav-link main_bullit' href="#experience">Experience</a></li>
 				<!-- SUB -->
 				<li class="nav-item"><a class = 'nav-link sub_bullit' href="#zen_tuning">Zen Tuning</a></li>
@@ -348,81 +336,187 @@ Cali Lotto Data <br>Engineering & EDA</a>
 	    </ul>
 	  </nav>
   <!-- END OF SIDEBAR  -->
-
 </div>
 
+<div class="container">
 
-<div id = 'main_content' class="col-md-9">
+  <div id = 'main_content' class="col-11">
 
-	<!-- MAIN CONTENT  -->
-  <!-- -------------------------------------------- -->
-  <!-- **** ABOUT **** -->
-  <!-- -------------------------------------------- -->
+    <div class="container-fluid">
 
-  <p id = 'about' class = 'info'>
-    <center>	<h1><img width = '75x'src="/static/construction_hat.jpg"><u>Page is Under Construction</u><img width = '75px'src="/static/construction_hat.jpg"></h1>
-     <p class = 'name'>CHRISTOPHER RICHARDSON</p>
-     <div class="col-4"><img style = 'border-radius: 50%;' src="/static/profile_img.jpg" class="img-fluid" width = '250px' alt = 'Profile Picture'>
-     </center>
-   </p>
+      <!-- **** ABOUT **** -->
+<!-- -------------------------------------------- -->
+<p id ='professional_background' class = 'dummy'></p>
+
+<p id = 'about' class = 'info'>
+  <center>	<h1><img width = '75x'src="/static/construction_hat.jpg"><u>Page is Under Construction</u><img width = '75px'src="/static/construction_hat.jpg"></h1>
+   <p class = 'name'>CHRISTOPHER RICHARDSON</p>
+   <div class="col-4"><img style = 'border-radius: 50%;' src="/static/profile_img.jpg" class="img-fluid" width = '250px' alt = 'Profile Picture'>
+   </center>
+ </p>
 
 
-   <p id ='professional_background' class = 'dummy'></p>
-	 <p class = 'strong'>Professional Background</p>
-   <p class = 'content'>
-		Associate Data Engineer with a passion for technology looking to leverage academic and professional background in Data Science, academic marketing research, and IT experience.  I have experience in cleaning and manipulating data sets through Python and R, diving into the data looking for trends through Exploratory Data Analysis using tools such as GGPlot, Seaborn, and Tableau. I love working with people with various backgrounds to get a well-rounded view on any subject at hand.  I have proven skills in customer service, marketing, teaching, and team management
-   </p>
-	 <p id ='personal_background' class = 'dummy'></p>
-	 <p class = 'strong'>Personal Background</p>
-	 <p class = 'content'>
-		Currently, I am in route looking for a graduate program in the field of Data Science with a specialization in Human Dynamics or Health Informatics.  I am able to speak elementary level Korean and Tagalog.  I have traveled and lived in various places in Asia and North America.  I have a few other plans in the future to see more of the wonderful world we live in.
-	 </p>
-   <p id = 'programs_and_tools' class = 'dummy'></p>
+ <p class = 'strong'>Professional Background</p>
+ <p class = 'content'>
+	Associate Data Engineer with a passion for technology looking to leverage academic and professional background in Data Science, academic marketing research, and IT experience.  I have experience in cleaning and manipulating data sets through Python and R, diving into the data looking for trends through Exploratory Data Analysis using tools such as GGPlot, Seaborn, and Tableau. I love working with people with various backgrounds to get a well-rounded view on any subject at hand.  I have proven skills in customer service, marketing, teaching, and team management
+ </p>
+ <p id ='personal_background' class = 'dummy'></p>
+ <p class = 'strong'>Personal Background</p>
+ <p class = 'content'>
+	Currently, I am in route looking for a graduate program in the field of Data Science with a specialization in Human Dynamics or Health Informatics.  I am able to speak elementary level Korean and Tagalog.  I have traveled and lived in various places in Asia and North America.  I have a few other plans in the future to see more of the wonderful world we live in.
+ </p>
+ <p id = 'programs_and_tools' class = 'dummy'></p>
 
-   <p class = 'strong'>Programming Languages and Tools</p>
+ <p class = 'strong'>Programming Languages and Tools</p>
 
-   <i class="fab fa-python fa-4x"></i>
-   <i class="fab fa-r-project fa-4x"></i>
-	 <i class="fas fa-database fa-4x"></i>
-   <i class="fab fa-js-square fa-4x"></i>
-   <i class="fab fa-html5 fa-4x"></i>
-   <br><br>
-   <p class = 'content'>
-    <strong> Computer Languages </strong>: Python | R | SQL | VBA/GAscript | JavaScript<br>
-		<strong> Libraries </strong>: Pandas | Tidyverse | SciKit Learn | Shiny | Seaborn | Pymongo | SQLAlchemy<br>
-		<strong> Web Frameworks </strong>: Flask | Selenium | Bootstrap | Liquid<br>
-    <strong>Software:</strong> Tableau | Jira | MS Office Suite | RStudio | Jupyter Notebook | SPSS | MS Visio/Lucid Chart
-  </p>
+ <i class="fab fa-python fa-4x"></i>
+ <i class="fab fa-r-project fa-4x"></i>
+ <i class="fas fa-database fa-4x"></i>
+ <i class="fab fa-js-square fa-4x"></i>
+ <i class="fab fa-html5 fa-4x"></i>
+ <br><br>
+ <p class = 'content'>
+  <strong> Computer Languages </strong>: Python | R | SQL | VBA/GAscript | JavaScript<br>
+	<strong> Libraries </strong>: Pandas | Tidyverse | SciKit Learn | Shiny | Seaborn | Pymongo | SQLAlchemy<br>
+	<strong> Web Frameworks </strong>: Flask | Selenium | Bootstrap | Liquid<br>
+  <strong>Software:</strong> Tableau | Jira | MS Office Suite | RStudio | Jupyter Notebook | SPSS | MS Visio/Lucid Chart
+</p>
+      <!--  NOTE: TEST PILOT -->
+<p id="projects" class = 'dummy'></p>
 
-  <p id="experience" class = 'dummy'></p>
-  <!-- -------------------------------------------- -->
-  <!-- **** RESUME **** -->
-  <!-- -------------------------------------------- -->
-	<hr>
+<p class = 'section_divider'>
+  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspProjects&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+</p>
 
-  <p class = 'experience'>Experience</p>
-	<hr>
+<!-- PROJECT HEADERS  -->
+<div class = "row">
+  <div class ="col-6">
+    <p class = 'project-type'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Python Based &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+  </div>
+  <div class ="col-6">
+    <p class = 'project-type'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp R Based &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+  </div>
+</div>
+
+<div class="row">
+
+  <!--  PYTHON BASED PROJECT -->
+
+  <div class="col-3">
+    <a href="https://cfrichardson.info/Weather_EDA_webpage/">
+      <div class="card" >
+        <img class="card-img-top" src="/static/Weather_Flask.PNG" >
+        <div class="card-body">
+          <h5 class="card-title">Weather EDA</h5>
+          <p class="card-text">EDA that explores a ctiy's  explores a city's equator in relationship to variables such as temperature, cloudiness, humidity, and wind speed</p>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="col-3">
+    <a href="/PyCitySchools_EDA.html">
+
+      <div class="card">
+        <img class="card-img-top" src="/static/py_schools.PNG">
+        <div class="card-body">
+          <h5 class="card-title">School Comparison</h5>
+          <p class="card-text">Exploratory Data Analysis of a District's performance in two different types of schools: </p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <!--  R BASED PROJECT -->
+  <div class="col-3">
+    <a href="https://cfrichardson1.shinyapps.io/july_scheduler_demo/">
+      <div class="card">
+        <img class="card-img-top" src="/static/Shiny.PNG">
+        <div class="card-body">
+          <h5 class="card-title">Shiny Schedule App</h5>
+          <p class="card-text">A scheduling application that allows users to view team schedules allowing for easy shift swaps.<p>
+          </div>
+        </div>
+      </a>
+    </div>
+    <div class="col-3">
+      <a href="http://cfrichardson.info/lotto_eda_Website/">
+
+        <div class="card">
+          <img class="card-img-top" src="/static/lotto_page.PNG">
+          <div class="card-body">
+            <h5 class="card-title">Lotto EDA</h5>
+            <p class="card-text">A quick lotto EDA that shows the process of cleaning and certain trends found by creating new variables based on given data by the state</p>
+          </div>
+        </div>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+      <p id="experience" class = 'dummy'></p>
+
+<p class = 'section_divider'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspExperience&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+<!-- ---------- -->
+<!-- Trilogy Education -->
+<!-- ---------- -->
+<p id ='trilogy_ed' class = 'dummy'></p>
+<div class="row">
+  <div class="col-md-1">
+    <a href = 'https://www.trilogyed.com/'>
+      <img width = '90px'  src="/static/trilogy.png" >
+    </div>
+    <div class="col-md-11">
+      <!-- Job Description Header -->
+      <p>
+        <font style = 'font-size: 25px; font-weight: bold;'>Trilogy Education Services</font><br>
+      </a>
+      <i>2019 till Present</i><br>
+      Online Tutor<br><font size = '3'>Remote</font></p>
+      <!-- END Job Description Header -->
+
+      <p>
+        <li class = 'job_bullets'>Tutor assigned Full Stack and Data Visualization Bootcamp students throughout program duration via web</li>
+        <li class = 'job_bullets'> Schedule appointments with students to further develop a unique, custom tailored, tutoring experience for each student throughout program durations</li>
+      </p>
+    </div>
+  </div>
+  <!-- -------- -->
+  <!-- END Trilogy Education -->
+  <!-- ---------- -->
 
   <!-- ---------- -->
   <!-- ZEN TUNING -->
   <!-- ---------- -->
-	<p id ='zen_tuning' class = 'dummy'></p>
+  <p id ='zen_tuning' class = 'dummy'></p>
   <div class="row">
     <div class="col-md-1">
-      <img href = 'https://ZenTuning.com' width = '90px' alt="Zen Tuning LLC" src="/static/zen_tuning.jpg" >
-    </div>
-    <div class="col-md-11">
-      <!-- Job Description Header -->
-      <p><font style = 'font-size: 25px; font-weight: bold;'>Zen Tuning</font><br>
-        <i>2018 till Present</i><br>
-        Junior Robotics Engineer & Shopify Web Developer<br><font size = '3'>San Diego, CA</font></p>
-        <!-- END Job Description Header -->
+      <a href = 'https://ZenTuning.com'>
 
-        <p> <a href="https://ZenTuning.com" style="color: rgb(88, 146, 239)">www.ZenTuning.com</a> & <a href="https://CircuitSyndicate.com" style="color: rgb(88, 146, 239)">www.CircuitSyndicate.com</a>
-          <li class = 'job_bullets'>Design, documentation with Fritzing, assist in the build and assembly of Arduino based TIG weld bot using C++ and Python</li>
-          <li class = 'job_bullets'>Assist engineers in the design of high performance automotive parts</li>
-          <li class = 'job_bullets'>Design of User Interface through Liquid template language and CSS</li>
-          <li class = 'job_bullets'>Implementation of Search Engine Optimization through Google Analytics to achieve an increase in organic search conversions</li>
+
+        <img href = 'https://ZenTuning.com' width = '90px' alt="Zen Tuning LLC" src="/static/zen_tuning.jpg" >
+      </div>
+      <div class="col-md-11">
+        <!-- Job Description Header -->
+        <p>
+          <font style = 'font-size: 25px; font-weight: bold;'>Zen Tuning</font><br>
+        </a>
+        <i>2018 till Present</i><br>
+        IT & Web Development<br><font size = '3'>Remote</font></p>
+        <!-- END Job Description Header -->
+        <!-- Job Description Header -<link rel="shortcut icon" href=".ico">-
+        <p><font style = 'font-size: 25px; font-weight: bold;'>Zen Tuning</font><br>
+      </a>
+      <i>2018 till Present</i><br>
+      Junior Robotics Engineer & Shopify Web Developer<br><font size = '3'>San Diego, CA</font></p>
+      <!-- END Job Description Header -->
+
+      <p>
+        <li class = 'job_bullets'>Design, documentation with Fritzing, assist in the build and assembly of Arduino based TIG weld bot using C++ and Python</li>
+        <li class = 'job_bullets'>Assist engineers in the design of high performance automotive parts</li>
+        <li class = 'job_bullets'>Design of User Interface through Liquid template language and CSS</li>
+        <li class = 'job_bullets'>Implementation of Search Engine Optimization through Google Analytics to achieve an increase in organic search conversions</li>
+      </p>
     </div>
   </div>
   <!-- -------- -->
@@ -432,14 +526,17 @@ Cali Lotto Data <br>Engineering & EDA</a>
   <!-- ---------- -->
   <!-- Cruise Automation -->
   <!-- ---------- -->
-	<p id = 'cruise_automation' class = 'dummy'></p>
+  <p id = 'cruise_automation' class = 'dummy'></p>
   <div class="row">
     <div class="col-md-1">
+      <a href = 'https://getcruise.com/'>
       <img width = '110px' alt="Cruise Automation" src="/static/Cruise.png">
     </div>
     <div class="col-md-11">
       <!-- Job Description Header -->
-      <p><font style = 'font-size: 25px; font-weight: bold;'>Cruise Automation</font><font style = 'font-size: 15px;'> (a General Motors Company)</font><br>
+      <p>
+        <font style = 'font-size: 25px; font-weight: bold;'>Cruise Automation through Aerotek</font><font style = 'font-size: 15px;'> (a General Motors Company)</font><br>
+        </a>
         <i>2017 to 2018</i><br>
         R&D Autonomous Vehicle Trainer<br><font size = '3'>San Francisco, CA</font></p>
         <!-- END Job Description Header -->
@@ -449,6 +546,8 @@ Cali Lotto Data <br>Engineering & EDA</a>
         <li class = 'job_bullets'>Assisted with ensuring that training curriculum was up to date with industry safety standards</li>
         <li class = 'job_bullets'>Trained Autonomous Vehicle Trainees on current software and autonomous vehicle operation</li>
         <li  class = 'job_bullets'>Compiled detailed reports providing feedback based on vehicle behavior</li>
+      </p>
+
     </div>
   </div>
   <!-- -------- -->
@@ -459,14 +558,17 @@ Cali Lotto Data <br>Engineering & EDA</a>
   <!-- ---------- -->
   <!-- Google -->
   <!-- ---------- -->
-	<p id = 'google' class = 'dummy'></p>
+  <p id = 'google' class = 'dummy'></p>
   <div class="row">
     <div class="col-md-1">
+      <a href = 'www.google.com'>
       <img width = '90px' alt="Google" src="/static/Google.png">
     </div>
     <div class="col-md-11">
       <!-- Job Description Header -->
-      <p><font style = 'font-size: 25px; font-weight: bold;'>Google through BC Forward</font><br>
+      <p>
+        <font style = 'font-size: 25px; font-weight: bold;'>Google through BC Forward</font><br>
+        </a>
         <i>2016 to 2017</i><br>
         Data integrity Specialist<br><font size = '3'>Mountain View, CA</font></p>
         <!-- END Job Description Header -->
@@ -474,6 +576,8 @@ Cali Lotto Data <br>Engineering & EDA</a>
         <li class = 'job_bullets'>Developed an interactive work schedule web application using the Shiny library for R</li>
         <li class = 'job_bullets'>Performed a wide variety of application policy reviews for the client's production line; including QA support, quick turnaround reviews, and critical thinking</li>
         <li class = 'job_bullets'>Took action on non-compliant products to ensure optimal quality in order to protect Google's reputation</li>
+      </p>
+
     </div>
   </div>
   <!-- -------- -->
@@ -484,14 +588,17 @@ Cali Lotto Data <br>Engineering & EDA</a>
   <!-- ---------- -->
   <!-- YMCA -->
   <!-- ---------- -->
-	<p id = 'ymca' class = 'dummy'></p>
+  <p id = 'ymca' class = 'dummy'></p>
   <div class="row">
     <div class="col-md-1">
+      <a href = 'https://www.ymca.org/'>
       <img width = '90px' alt="YMCA" src="/static/ymca.png">
     </div>
     <div class="col-md-11">
       <!-- Job Description Header -->
-      <p><font style = 'font-size: 25px; font-weight: bold;'>YMCA of San Diego</font><br>
+      <p>
+        <font style = 'font-size: 25px; font-weight: bold;'>YMCA of San Diego</font><br>
+        </a>
         <i>2015 to 2015</i><br>
         Afterschool Mentor<br><font size = '3'>San Diego, CA</font></p>
         <!-- END Job Description Header -->
@@ -499,19 +606,24 @@ Cali Lotto Data <br>Engineering & EDA</a>
         <li class = 'job_bullets'>Mentored middle school students with homework in fields such as math, reading, and history</li>
         <li class = 'job_bullets'>Generated interest in computer hardware, software, and other computer related technologies</li>
         <li class = 'job_bullets'>Introduced students to basic programming languages, structures, and ideas through Code.Org  and the use of a Raspberry Pi 2</li>
+      </p>
+
     </div>
   </div>
   <!-- -------- -->
   <!-- END YMCA -->
   <!-- ---------- -->
 
+    </div>
+
+  </div>
 
 </div>
 
-  
 
-</div>
+    </div>
 
+    
 
 
 
@@ -526,7 +638,7 @@ Cali Lotto Data <br>Engineering & EDA</a>
 
 
       <div class="col-6">
-          <p class="card-title">CONTACT INFO</p>
+          <p id = 'contact_title' class="card-title">CONTACT INFO</p>
           <hr>
           <p class="card-text text-black">
             <strong>Mobile: </strong>(949) 529-0656<br>
@@ -569,9 +681,7 @@ Cali Lotto Data <br>Engineering & EDA</a>
 
 
 
-</body>
-
-</div>
+  </body>
 
 </div>
 
