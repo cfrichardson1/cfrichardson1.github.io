@@ -88,7 +88,11 @@
     font-size: 13px;
   }
 
-  /* Dummy Sections for padding purposes as well as HTML targets */
+  /* Padding Sizes for blank Sections for padding purposes as well as HTML targets */
+  p.about_container {
+    padding-top:70px;
+    height: 30px;
+  }
   p.dummy {
     height: 30px;
   }
@@ -100,7 +104,7 @@
   }
 
   p.section_divider {
-    padding-top: 100px;
+    padding-top: 40px;
     font-family: "Arial Black", Gadget, sans-serif;
     font-size: 40px;
     text-align: center;
@@ -305,30 +309,37 @@
 <div class="col-md-1 d-sm-none d-xl-block d-print-block">
 
 
-	<!-- Side Navbar -->
+	<!-- Site Navbar -->
 
 
 	<nav id="myScrollspy" class="navbar d-none d-lg-block d-print-block">
 		<ul class="nav nav-pills flex-column">
-			<!-- ---------- ABOUT SIDEBAR ---------- -->
-				<li class="nav-item"><a class = 'nav-link active main_bullit' href="#about">About</a></li>
+			<!-- ---------- ABOUT ---------- -->
+				<li class="nav-item"><a class = 'nav-link active main_bullit' href="#professional_background">About</a></li><!-- * switched links to quickly solve padding issue  -->
 				<!-- SUB -->
-				<li class="nav-item"><a class = 'nav-link sub_bullit' href="#professional_background">Professional Background</a></li>
+				<li class="nav-item"><a class = 'nav-link sub_bullit' href="#about">Professional Background</a></li><!-- * switched links to quickly solve padding issue  -->
 				<li class="nav-item"><a class = 'nav-link sub_bullit' href="#personal_background">Personal Background</a></li>
 				<li class="nav-item"><a class = 'nav-link sub_bullit' href="#programs_and_tools">Languages and Tools</a></li>
 
-				<!-- ---------- PROJECTS SIDEBAR ---------- -->
+				<!-- ---------- PROJECTS ---------- -->
 				<li class="nav-item"><a class = 'nav-link main_bullit' href="#projects">Projects</a></li>
 
 
-				<!-- ---------- EXPERIENCE SIDEBAR ---------- -->
+				<!-- ---------- EXPERIENCE ---------- -->
 				<li class="nav-item"><a class = 'nav-link main_bullit' href="#experience">Experience</a></li>
 				<!-- SUB -->
+				<li class="nav-item"><a class = 'nav-link sub_bullit' href="#tusimple">TuSimple</a></li>
 				<li class="nav-item"><a class = 'nav-link sub_bullit' href="#zen_tuning">Zen Tuning</a></li>
 				<li class="nav-item"><a class = 'nav-link sub_bullit' href="#cruise_automation">Cruise Automation</a></li>
 				<li class="nav-item"><a class = 'nav-link sub_bullit' href="#google">Google</a></li>
 				<li class="nav-item"><a class = 'nav-link sub_bullit' href="#ymca">YMCA</a></li>
-	      <li class="nav-item"><a class = 'nav-link main_bullit' href="#contact_card">Contact Info</a></li>
+
+				<!-- ---------- Volunter ---------- -->
+				<li class="nav-item"><a class = 'nav-link active main_bullit' href="#volunteer_experience">Volunteer Experience</a></li>
+
+				<!-- ---------- Contact ---------- -->
+
+				<li class="nav-item"><a class = 'nav-link main_bullit' href="#contact_card">Contact Info</a></li>
 
 	    </ul>
 	  </nav>
@@ -343,7 +354,7 @@
 
       <!-- **** ABOUT **** -->
 <!-- -------------------------------------------- -->
-<p id ='professional_background' class = 'dummy'></p>
+<p id ='professional_background' class = 'about_container'></p>
 
 <p id = 'about' class = 'info'>
   <center>
@@ -355,14 +366,14 @@
 
  <p class = 'strong'>Professional Background</p>
  <p class = 'content'>
-	Associate Data Engineer with a passion for technology looking to leverage academic and professional background in Data Science, academic marketing research, and IT experience.  I have experience in cleaning and manipulating data sets through Python and R, diving into the data looking for trends through Exploratory Data Analysis using tools such as GGPlot, Seaborn, and Tableau. I love working with people with various backgrounds to get a well-rounded view on any subject at hand.  I have proven skills in customer service, marketing, teaching, and team management
+	Associate Data Engineer with a passion for technology looking to leverage academic and professional background in Data Science, academic marketing research, and IT experience.  Chris has experience in cleaning and manipulating big data through Python and R, diving into the data looking for trends through Exploratory Data Analysis using tools such as GGPlot, Seaborn, and Tableau. He loves working with people with various backgrounds to get a well-rounded view on any subject at hand.  He has proven skills in customer service, marketing, teaching, and team management
  </p>
- <p id ='personal_background' class = 'dummy'></p>
+ <p id ='personal_background' class = 'about_container'></p>
  <p class = 'strong'>Personal Background</p>
  <p class = 'content'>
-	Currently, I am in route looking for a graduate program in the field of Data Science with a specialization in Human Dynamics or Health Informatics.  I am able to speak elementary level Korean and Tagalog.  I have traveled and lived in various places in Asia and North America.  I have a few other plans in the future to see more of the wonderful world we live in.
+	Currently, Chris is in route looking for a graduate program in the field of Data Science with a specialization in Human Dynamics or Health Informatics. Chris have traveled and lived in various places in Asia and North America, thus is able to speak elementary Korean and Tagalog.
  </p>
- <p id = 'programs_and_tools' class = 'dummy'></p>
+ <p id = 'programs_and_tools' class = 'about_container'></p>
 
  <p class = 'strong'>Programming Languages and Tools</p>
 
@@ -371,6 +382,8 @@
  <i class="fas fa-database fa-4x"></i>
  <i class="fab fa-js-square fa-4x"></i>
  <i class="fab fa-html5 fa-4x"></i>
+ <i class="fab fa-confluence fa-4x"></i>
+ <i class='fab fa-jira fa-4x'></i>
  <br><br>
  <p class = 'content'>
   <strong> Computer Languages </strong>: Python | R | SQL | VBA/GAscript | JavaScript<br>
@@ -455,6 +468,35 @@
 
 <p class = 'section_divider'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspExperience&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
 <!-- ---------- -->
+<!-- TuSimple -->
+<!-- ---------- -->
+<p id ='tusimple' class = 'dummy'></p>
+<div class="row">
+  <div class="col-md-1">
+    <a href = 'https://www.tusimple.com/'>
+      <img width = '90px'  src="/static/tusimple.png" >
+    </div>
+    <div class="col-md-11">
+      <!-- Job Description Header -->
+      <p>
+        <font style = 'font-size: 25px; font-weight: bold;'>TuSimple Inc.</font><br>
+      </a>
+      <i>August to December 2019</i><br>
+      Verification Engineer<br><font size = '3'>San Diego</font></p>
+      <!-- END Job Description Header -->
+      <p>
+        <li class = 'job_bullets'>Develop and update various spreadsheets to increase calculation efficiency and accuracy</li>
+        <li class = 'job_bullets'>Create simulation test plans with logic-based requirements to perform in-depth root-cause analysis</li>
+        <li class = 'job_bullets'>Identify critical software failure events and provide feedback to appropriate teams</li>
+        <li class = 'job_bullets'>Construct calculated logic requirements based on scenario set-up</li>
+      </p>
+    </div>
+  </div>
+  <!-- -------- -->
+  <!-- END Tusimple Inc. -->
+  <!-- ---------- -->
+
+<!-- ---------- -->
 <!-- Trilogy Education -->
 <!-- ---------- -->
 <p id ='trilogy_ed' class = 'dummy'></p>
@@ -468,12 +510,12 @@
       <p>
         <font style = 'font-size: 25px; font-weight: bold;'>Trilogy Education Services</font><br>
       </a>
-      <i>2019 till Present</i><br>
+      <i>April to October 2019</i><br>
       Senior Remote Tutor<br><font size = '3'>Remote</font></p>
       <!-- END Job Description Header -->
 
       <p>
-        <li class = 'job_bullets'>-Online/Remote tutoring students from several University coding boot camps across the U.S. in Data Visualization
+        <li class = 'job_bullets'>Online/Remote tutoring students from several University coding boot camps across the U.S. in Data Visualization
            and Web Development skills covering advanced Excel & VBA, Python, NumPy, Pandas,  HTML/CSS, Bootstrap, React, Flask, Selenium, Matplotlib,
             MySQL, MongoDB, JavaScript, D3.js, Tableau, Spark, Scikit-Learn & R</li>
         <li class = 'job_bullets'> Schedule appointments with students to further develop a unique, custom-tailored, tutoring experience for each student throughout program durations</li>
@@ -536,7 +578,7 @@
       <p>
         <font style = 'font-size: 25px; font-weight: bold;'>Cruise Automation through Aerotek</font><font style = 'font-size: 15px;'> (a General Motors Company)</font><br>
         </a>
-        <i>2017 to 2018</i><br>
+        <i>September 2017 to April 2018</i><br>
         R&D Autonomous Vehicle Trainer<br><font size = '3'>San Francisco, CA</font></p>
         <!-- END Job Description Header -->
 
@@ -568,7 +610,7 @@
       <p>
         <font style = 'font-size: 25px; font-weight: bold;'>Google through BC Forward</font><br>
         </a>
-        <i>2016 to 2017</i><br>
+        <i>January 2016 to July 2017</i><br>
         Data integrity Specialist<br><font size = '3'>Mountain View, CA</font></p>
         <!-- END Job Description Header -->
         <li class = 'job_bullets'>Aided in adding processes to the content review process which enabled analysts to exceed required metrics, increasing efficiency by 20+ %</li>
@@ -598,7 +640,7 @@
       <p>
         <font style = 'font-size: 25px; font-weight: bold;'>YMCA of San Diego</font><br>
         </a>
-        <i>2015 to 2015</i><br>
+        <i>February to August 2015</i><br>
         Afterschool Mentor<br><font size = '3'>San Diego, CA</font></p>
         <!-- END Job Description Header -->
 
@@ -612,6 +654,43 @@
   <!-- -------- -->
   <!-- END YMCA -->
   <!-- ---------- -->
+      <p id="volunteer_experience" class = 'dummy'></p>
+
+<p class = 'section_divider'>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspVolunteer_Experience&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p>
+<!-- ---------- -->
+<!-- C2K Education -->
+<!-- ---------- -->
+<p id ='C2k' class = 'dummy'></p>
+<div class="row">
+  <div class="col-md-1">
+    <a href = 'https://www.c2sdk.org/'>
+      <img width = '90px'  src="/static/C2kids.png">
+    </div>
+    <div class="col-md-11">
+      <!-- Job Description Header -->
+      <p>
+        <font style = 'font-size: 25px; font-weight: bold;'>Computers 2 yo Kids</font><br>
+      </a>
+      <i>2019 till Present</i><br>
+      Refurbish Tech, Tech Mentor, & Volunteer Staff<br><font size = '3'>San Diego</font></p>
+      <!-- END Job Description Header -->
+
+      <p>
+        <li class = 'job_bullets'>Responsible for post processing, which includes reconfiguration of refurbished computer hardware, installation of partner anti-virus/spam/phishing software</li>
+        <li class = 'job_bullets'>Assist in the process of handing out low-cost laptops, desktops, and tablets to those without sufficient resources for a new device</li>
+      </p>
+    </div>
+  </div>
+  <!-- -------- -->
+  <!-- END Trilogy Education -->
+  <!-- ---------- -->
+
+    </div>
+
+  </div>
+
+</div>
+
 
     </div>
 
